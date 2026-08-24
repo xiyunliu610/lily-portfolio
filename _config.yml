@@ -3,17 +3,23 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Lily Portfolio
+subtitle: Frontend Engineer · Full-stack Developer
+description: Lily is an Auckland-based frontend engineer and full-stack developer building practical, user-centered web applications.
 keywords:
-author: John Doe
-language: en
-timezone: ''
+  - Lily
+  - Frontend Engineer
+  - Full-stack Developer
+  - React
+  - TypeScript
+  - Auckland
+author: Lily
+language: en-NZ
+timezone: Pacific/Auckland
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://xiyunliu610.github.io/lily-portfolio
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
