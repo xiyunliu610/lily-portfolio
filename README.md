@@ -20,6 +20,15 @@ pnpm run build
 
 The generated site is written to `public/`.
 
+## Deployment
+
+Pushes to `main` are built and deployed automatically with GitHub Actions.
+
+Live site: <https://xiyunliu610.github.io/lily-portfolio/>
+
+For the first deployment, set the repository's **Settings → Pages → Build and
+deployment → Source** to **GitHub Actions**.
+
 ## Project structure
 
 - `themes/lily/` — portfolio layout, styles, and browser scripts

@@ -2,6 +2,7 @@
   "name": "lily-portfolio",
   "version": "0.0.0",
   "private": true,
+  "packageManager": "pnpm@10.33.2",
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
