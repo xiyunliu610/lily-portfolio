@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Lily Portfolio
-subtitle: Frontend Engineer · Full-stack Developer
-description: Lily is an Auckland-based frontend engineer and full-stack developer building practical, user-centered web applications.
+title: Lily Liu Portfolio
+subtitle: Graduate Software Engineer · Full-stack Development
+description: Lily Liu is an Auckland-based graduate software engineer with three years of frontend experience, building practical full-stack products around real-world needs.
 keywords:
   - Lily
   - Frontend Engineer
@@ -13,13 +13,14 @@ keywords:
   - React
   - TypeScript
   - Auckland
-author: Lily
+author: Lily Liu
 language: en-NZ
 timezone: Pacific/Auckland
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://xiyunliu610.github.io/lily-portfolio
+root: /lily-portfolio/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:

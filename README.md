@@ -9,7 +9,7 @@ pnpm install
 pnpm run server
 ```
 
-Then open <http://localhost:4000>.
+Then open <http://localhost:4000/lily-portfolio/>.
 
 ## Production build
 

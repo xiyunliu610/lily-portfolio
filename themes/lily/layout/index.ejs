@@ -1,184 +1,271 @@
 <!DOCTYPE html>
 <html lang="<%= config.language || 'en-NZ' %>">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="<%= config.description %>" />
-<meta name="author" content="<%= config.author %>" />
-<meta name="theme-color" content="#f5f2ea" />
-<meta property="og:title" content="Lily — Frontend / Full-stack Developer" />
-<meta property="og:description" content="<%= config.description %>" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="<%= config.url %>" />
-<meta property="og:locale" content="en_NZ" />
-<title><%= config.title %> — Frontend / Full-stack Developer</title>
-<link rel="canonical" href="<%= config.url %>" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="<%- url_for('/css/style.css') %>" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= config.description %>">
+  <meta name="author" content="<%= config.author %>">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta property="og:title" content="Lily Liu — Graduate Software Engineer">
+  <meta property="og:description" content="<%= config.description %>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<%= config.url %>/">
+  <meta property="og:locale" content="en_NZ">
+  <title>Lily Liu — Graduate Software Engineer</title>
+  <link rel="canonical" href="<%= config.url %>/">
+  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
 </head>
+
 <body>
-<div class="frame">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<nav id="nav">
-  <div class="wrap nav-inner">
-    <a href="#top" class="logo">Lily<span>.</span></a>
-    <div class="nav-links" id="navLinks">
-      <a href="#top" class="active">Home</a>
-      <a href="#work">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#" class="btn" id="cvBtn">Resume
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
-      </a>
-    </div>
-    <button class="nav-toggle" id="navBtn" aria-label="Menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
-    </button>
-  </div>
-</nav>
+  <div class="page-shell">
+    <nav class="site-nav" id="nav" aria-label="Primary navigation">
+      <div class="wrap nav-inner">
+        <a class="logo" href="#top" aria-label="Lily Liu, home">Lily<span>.</span></a>
 
-<header class="hero" id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <span class="pill mono">&gt;_ developer.exe</span>
-      <h1 class="hero-title serif">Lily<span class="dot">.</span></h1>
-      <div class="hero-role">Frontend Engineer · Full-stack Developer</div>
-      <p class="hero-sub">I build practical, user-centered web apps with clean code and thoughtful design — turning ideas into useful products.</p>
-      <div class="hero-cta">
-        <a href="#work" class="btn">View my work
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="#" class="btn btn-ghost" id="cvBtn2">Download CV
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 21h16"/></svg>
-        </a>
-      </div>
-      <div class="connect-label">Let's connect</div>
-      <div class="socials">
-        <a href="https://github.com/xiyunliu610" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
-        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.3 18.3v-7H6v7h2.3zM7.1 10a1.3 1.3 0 100-2.7 1.3 1.3 0 000 2.7zm11.2 8.3v-3.9c0-2.1-1.1-3.1-2.7-3.1-1.2 0-1.8.7-2.1 1.2v-1H11.5s0 .6 0 7h2.3v-3.9c0-.2 0-.4.1-.6.2-.4.5-.9 1.2-.9.9 0 1.2.7 1.2 1.6v3.8h2.3z"/></svg></a>
-        <a href="mailto:xliu713@aucklanduni.ac.nz" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
-      </div>
-    </div>
-
-    <div class="hero-visual reveal">
-      <div class="dots-deco">
-        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-        <i></i><i></i><i></i><i></i><i></i>
-      </div>
-      <div class="hero-note">code · animals · <span>ideas</span></div>
-      <div class="portrait"><div class="ph">[ your photo here ]<br>4:4.5 portrait</div></div>
-      <div class="term">
-        <div class="term-bar"><i class="g"></i><i class="y"></i><i class="r"></i></div>
-        <div class="term-body">
-          <div><span class="ln">01</span><span class="k">const</span> builder = (idea) =&gt; {</div>
-          <div><span class="ln">02</span>&nbsp;&nbsp;<span class="k">const</span> impact = build(idea);</div>
-          <div><span class="ln">03</span>&nbsp;&nbsp;<span class="k">return</span> <span class="p">impact</span>;</div>
-          <div><span class="ln">04</span>};</div>
+        <div class="nav-links" id="navLinks">
+          <a href="#work">Work</a>
+          <a href="#experience">Experience</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a class="button button-small" href="#contact">Let’s talk</a>
         </div>
+
+        <button class="nav-toggle" id="navBtn" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-    </div>
-  </div>
-</header>
+    </nav>
 
-<section id="work" class="work wrap">
-  <div class="lbl reveal"><span class="n mono">01</span><span class="t">Selected work</span><a href="#" class="more">View all projects →</a></div>
-  <div class="proj-grid">
-    <article class="card card-a reveal">
-      <div class="thumb a"><span class="big-mark">01</span><span class="thumb-label">[ Y&amp;T Paws product screens ]</span></div>
-      <div class="card-body">
-        <div class="card-topline"><div><span class="num">01 / PRODUCT</span><h3>Y&amp;T Paws</h3></div><span class="type">Full-stack</span></div>
-        <p>An end-to-end booking platform for a real pet boarding &amp; home-visit business — database design, REST API and a responsive booking flow, currently in development.</p>
-        <div class="mini-tags"><span>React</span><span>TypeScript</span><span>NestJS</span><span>Prisma</span><span>PostgreSQL</span></div>
-        <a href="https://github.com/xiyunliu610/yt-paws-platform" class="cs">View project →</a>
+    <main id="main">
+      <header class="hero wrap" id="top">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">&gt;_ hello, I’m Lily</p>
+          <h1>I build useful software for <em>real-world problems.</em></h1>
+          <p class="hero-role">Graduate Software Engineer · Full-stack Development</p>
+          <p class="hero-intro">I bring three years of professional frontend experience and a growing full-stack toolkit to products that need clear thinking, reliable engineering and thoughtful user experiences.</p>
+
+          <div class="hero-actions">
+            <a class="button" href="#work">View my work <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost" href="https://github.com/xiyunliu610" target="_blank" rel="noopener noreferrer">GitHub profile <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="hero-meta" aria-label="Contact details">
+            <span>Auckland, New Zealand</span>
+            <a href="mailto:xliu713@aucklanduni.ac.nz">xliu713@aucklanduni.ac.nz</a>
+            <a href="https://github.com/xiyunliu610" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/xiyun-liu/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <aside class="profile-card reveal" aria-label="Career snapshot">
+          <div class="terminal-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <p>lily.profile.ts</p>
+          </div>
+          <pre aria-label="A short description in code"><code><span class="code-keyword">const</span> lily = {
+  focus: <span class="code-string">"useful products"</span>,
+  approach: [
+    <span class="code-string">"methodical"</span>,
+    <span class="code-string">"collaborative"</span>,
+    <span class="code-string">"user-focused"</span>
+  ],
+  basedIn: <span class="code-string">"Auckland"</span>
+};</code></pre>
+
+          <div class="snapshot-grid">
+            <div><strong>3+</strong><span>years in frontend</span></div>
+            <div><strong>2</strong><span>full-stack projects</span></div>
+            <div><strong>1,100+</strong><span>animals rescued</span></div>
+          </div>
+        </aside>
+      </header>
+
+      <section class="section wrap" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <p class="section-number">01 / Selected work</p>
+          <div>
+            <h2 id="work-title">Products built around real needs.</h2>
+            <p>Two production-oriented projects spanning mobile, web, backend systems and third-party integrations.</p>
+          </div>
+        </div>
+
+        <div class="project-list">
+          <article class="project project-pethome reveal">
+            <div class="project-visual" aria-hidden="true">
+              <div class="phone phone-one">
+                <span class="phone-label">Today’s care</span>
+                <i></i><i></i><i></i>
+              </div>
+              <div class="phone phone-two">
+                <span class="phone-label">Booking</span>
+                <b>PetHome</b>
+                <i></i><i></i>
+              </div>
+              <span class="project-index">01</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-kicker"><span>Real business platform</span><span>In development</span></div>
+              <h3>PetHome — Y&amp;T Paws</h3>
+              <p class="project-summary">A bilingual mobile platform replacing manual booking, payment and daily care-update workflows for an Auckland pet-care business.</p>
+              <ul class="project-points">
+                <li>Designed customer, owner and staff workflows for bookings, pet profiles, services, care reports and notifications.</li>
+                <li>Built a NestJS and Prisma API with JWT, business-scoped RBAC and transaction-safe capacity enforcement.</li>
+                <li>Integrated Stripe webhooks, a verified WeChat payment flow, media uploads, localisation and push infrastructure.</li>
+              </ul>
+              <div class="tags" aria-label="PetHome technologies">
+                <span>React Native</span><span>TypeScript</span><span>NestJS</span><span>PostgreSQL</span><span>Prisma</span><span>Stripe</span>
+              </div>
+              <a class="text-link" href="https://github.com/xiyunliu610/yt-paws-platform" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project project-chroma reveal">
+            <div class="project-visual chroma-visual" aria-hidden="true">
+              <span class="colour-orbit orbit-one"></span>
+              <span class="colour-orbit orbit-two"></span>
+              <span class="colour-orbit orbit-three"></span>
+              <div class="chroma-panel">
+                <small>COLLABORATIVE CHALLENGE</small>
+                <strong>Find your city’s colours.</strong>
+                <div><i></i><i></i><i></i><i></i></div>
+              </div>
+              <span class="project-index">02</span>
+            </div>
+
+            <div class="project-content">
+              <div class="project-kicker"><span>Team of six</span><span>Frontend ownership</span></div>
+              <h3>ChromaWalk</h3>
+              <p class="project-summary">A location-based social web app for discovering, capturing and sharing colours through collaborative challenges.</p>
+              <ul class="project-points">
+                <li>Owned frontend delivery in an Agile team, building responsive React interfaces and reusable component architecture.</li>
+                <li>Used Zustand and TanStack Query for predictable state and data fetching across iterative releases.</li>
+                <li>Delivered real-time chat, live progress, Google OAuth, Maps location selection and client-side image compression.</li>
+              </ul>
+              <div class="tags" aria-label="ChromaWalk technologies">
+                <span>React</span><span>TypeScript</span><span>Express</span><span>MongoDB</span><span>Socket.IO</span><span>Google Maps</span>
+              </div>
+              <a class="text-link" href="https://github.com/xiyunliu610/ChromaWalk" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="section-number">02 / Experience</p>
+            <div>
+              <h2 id="experience-title">Engineering, ownership and service.</h2>
+              <p>A career shaped by software delivery, operational leadership and long-term responsibility.</p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <article class="timeline-item reveal">
+              <div class="timeline-date">Jul 2026 — Present</div>
+              <div class="timeline-copy">
+                <p class="timeline-type">Volunteer experience</p>
+                <h3>Software Engineering Volunteer</h3>
+                <p class="timeline-org">Rural Youth and Adult Literacy Trust (RYALT)</p>
+                <p>Reviewed the WordPress platform with stakeholders, designed a backend refactoring strategy and now contribute to redevelopment focused on performance, maintainability and long-term scalability.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-date">Oct 2019 — May 2025</div>
+              <div class="timeline-copy">
+                <p class="timeline-type">Leadership &amp; operations</p>
+                <h3>Founder &amp; Operations Lead</h3>
+                <p class="timeline-org">Hangzhou Yatian Pet Products Co., Ltd. — Stray Animal Rescue Centre</p>
+                <p>Founded and scaled a rescue centre caring for up to 300 dogs at once. Built repeatable workflows, coordinated volunteers and veterinary partners, and oversaw the rescue of 1,000+ dogs and 100+ cats.</p>
+              </div>
+            </article>
+
+            <article class="timeline-item reveal">
+              <div class="timeline-date">Apr 2016 — Oct 2019</div>
+              <div class="timeline-copy">
+                <p class="timeline-type">Professional experience</p>
+                <h3>Software Engineer (Front-end)</h3>
+                <p class="timeline-org">Isoftstone Information Technology Co., Ltd.</p>
+                <p>Built Vue.js enterprise interfaces and ECharts visualisations, integrated REST APIs and collaborated across engineering and product. Reduced HTTP requests by 40% through CSS sprite-sheet optimisation.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="about" aria-labelledby="about-title">
+        <div class="section-heading reveal">
+          <p class="section-number">03 / About</p>
+          <div>
+            <h2 id="about-title">A methodical builder with an operator’s mindset.</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>I’m a graduate software engineer currently completing a Master of Information Technology at the University of Auckland. I enjoy translating messy, real-world processes into software that is clear, dependable and useful.</p>
+            <p>My experience spans frontend engineering, full-stack product development and more than five years of leading an animal rescue organisation. That combination taught me to ask better questions, make decisions under constraints and stay accountable for outcomes.</p>
+            <blockquote>“Good software should feel useful before it feels impressive.”</blockquote>
+          </div>
+
+          <div class="about-cards reveal">
+            <article class="info-card">
+              <p>Education</p>
+              <h3>Master of Information Technology</h3>
+              <span>University of Auckland · Expected 2027</span>
+            </article>
+            <article class="info-card">
+              <p>Based in</p>
+              <h3>Auckland, New Zealand</h3>
+              <span>Open to graduate software opportunities</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="skills reveal" aria-labelledby="skills-title">
+          <div class="skills-intro">
+            <p class="section-number">Core toolkit</p>
+            <h3 id="skills-title">Technologies I work with</h3>
+          </div>
+          <div class="skill-groups">
+            <div><strong>Languages</strong><span>TypeScript · JavaScript · SQL · HTML · CSS</span></div>
+            <div><strong>Frontend</strong><span>React · React Native · Vue.js · Svelte · Zustand · TanStack Query</span></div>
+            <div><strong>Backend &amp; data</strong><span>Node.js · NestJS · Express · PostgreSQL · MySQL · MongoDB · Prisma</span></div>
+            <div><strong>Practice</strong><span>Git · Docker · Agile/Scrum · Code reviews · Unit &amp; E2E testing</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="wrap contact-inner reveal">
+          <p class="section-number">04 / Contact</p>
+          <h2 id="contact-title">Let’s build something <em>useful.</em></h2>
+          <p>I’m open to graduate software engineering opportunities and conversations about thoughtful, practical products.</p>
+          <div class="contact-actions">
+            <a class="button button-light" href="mailto:xliu713@aucklanduni.ac.nz">Say hello <span aria-hidden="true">→</span></a>
+            <a class="button button-outline-light" href="https://www.linkedin.com/in/xiyun-liu/" target="_blank" rel="noopener noreferrer">View LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:xliu713@aucklanduni.ac.nz">Email</a>
+            <a href="https://github.com/xiyunliu610" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://www.linkedin.com/in/xiyun-liu/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© 2026 Lily Liu</span>
+        <span>Designed &amp; built in Auckland</span>
       </div>
-    </article>
-
-    <article class="card card-b reveal">
-      <div class="thumb b"><span class="big-mark">02</span><span class="thumb-label">[ ChromaWalk UI / interaction screens ]</span></div>
-      <div class="card-body">
-        <div class="card-topline"><div><span class="num">02 / TEAM PROJECT</span><h3>ChromaWalk</h3></div><span class="type">Frontend · team of 6</span></div>
-        <p>A location-based social app for discovering and sharing colours through collaborative challenges. I owned the frontend in a 6-person Agile team.</p>
-        <div class="mini-tags"><span>React</span><span>TypeScript</span><span>Socket.IO</span><span>MongoDB</span></div>
-        <a href="https://github.com/xiyunliu610/ChromaWalk" class="cs">View project →</a>
-      </div>
-    </article>
-
-    <article class="card card-c reveal">
-      <div class="thumb c"><span class="big-mark">03</span><span class="thumb-label">[ RYALT platform notes ]</span></div>
-      <div class="card-body">
-        <div class="card-topline"><div><span class="num">03 / VOLUNTEER</span><h3>RYALT Platform</h3></div><span class="type">Backend · volunteer</span></div>
-        <p>Software Engineering Volunteer for the Rural Youth and Adult Literacy Trust — reviewed their WordPress platform and designed a backend refactoring strategy for maintainability, scalability and performance.</p>
-        <div class="mini-tags"><span>WordPress</span><span>Backend</span><span>Refactoring</span></div>
-        <a href="#" class="cs">Read more →</a>
-      </div>
-    </article>
-
-    <article class="card card-d reveal" style="border-style:dashed; opacity:.75;">
-      <div class="thumb d"><span class="big-mark">04</span><span class="thumb-label">[ not started yet ]</span></div>
-      <div class="card-body">
-        <div class="card-topline"><div><span class="num">04 / UP NEXT</span><h3>Animal Rescue Website</h3></div><span class="type" style="color:var(--text-faint); border-color:var(--border); background:transparent;">Coming soon</span></div>
-        <p>A planned responsive site for rescue stories, adoption info and volunteer sign-up — not yet started. Check back soon.</p>
-        <div class="mini-tags"><span>Planned</span></div>
-      </div>
-    </article>
+    </footer>
   </div>
 
-  <div class="stack reveal">
-    <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6L2 12l6 6M16 6l6 6-6 6"/></svg></div>
-    <span class="lab">Core stack</span>
-    <div class="items"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Vue</span><span>Node.js</span><span>NestJS</span><span>PostgreSQL</span><span>Prisma</span><span>Git / GitHub</span></div>
-  </div>
-</section>
-
-<section id="rescue" class="wrap" style="padding: 0 0 60px;">
-  <div class="stack reveal" style="justify-content:flex-start;">
-    <div class="ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="10" r="2.1"/><circle cx="10.5" cy="6.5" r="2.1"/><circle cx="15" cy="6.5" r="2.1"/><circle cx="18.5" cy="10.5" r="2"/><path d="M12 12.5c-2.4 0-4.4 1.7-5 3.8-.5 1.9 1 3.2 2.6 2.6.8-.3 1.6-.4 2.4-.4s1.6.1 2.4.4c1.6.6 3.1-.7 2.6-2.6-.6-2.1-2.6-3.8-5-3.8z"/></svg></div>
-    <span class="lab">Also</span>
-    <div class="items" style="color:var(--text-dim); font-family:'Inter',sans-serif; font-size:.9rem;">Founder &amp; Operations Lead, Stray Animal Rescue Centre (2019–2025) — 1,000+ dogs and 100+ cats rescued.</div>
-  </div>
-</section>
-
-<section id="about" class="about wrap">
-  <div class="lbl reveal"><span class="n mono">02</span><span class="t">About me</span></div>
-  <div class="about-grid">
-    <div class="about-lead reveal">
-      <h2 class="serif">I like building things<br>that are <em>useful.</em></h2>
-      <p>I'm a frontend engineer with <strong>3+ years of experience</strong>, now expanding into full-stack development through React, TypeScript, Node.js and modern backend tooling.</p>
-      <p>What interests me most is the point where software meets real life: understanding what people actually need, simplifying the workflow, and turning it into something clear and usable.</p>
-      <div class="about-quote">“Good software should feel useful before it feels impressive.”</div>
-    </div>
-
-    <div class="about-meta reveal">
-      <div class="meta-row"><div class="mk">Based</div><div class="mv">Auckland, New Zealand</div></div>
-      <div class="meta-row"><div class="mk">Currently</div><div class="mv">Master of Information Technology<small>University of Auckland</small></div></div>
-      <div class="meta-row"><div class="mk">Previously</div><div class="mv">3+ years front-end development<small>Building production web interfaces</small></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-  <div class="wrap reveal">
-    <h2 class="serif">Let’s build something<br><em>meaningful.</em></h2>
-    <p>If you want to talk about software, a project, community work, or an idea worth building, feel free to reach out.</p>
-    <a href="mailto:xliu713@aucklanduni.ac.nz" class="btn" style="padding:13px 26px;">Say hello →</a>
-    <div class="socials">
-      <a href="https://github.com/xiyunliu610" aria-label="GitHub" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 016 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></a>
-      <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.3 18.3v-7H6v7h2.3zM7.1 10a1.3 1.3 0 100-2.7 1.3 1.3 0 000 2.7zm11.2 8.3v-3.9c0-2.1-1.1-3.1-2.7-3.1-1.2 0-1.8.7-2.1 1.2v-1H11.5s0 .6 0 7h2.3v-3.9c0-.2 0-.4.1-.6.2-.4.5-.9 1.2-.9.9 0 1.2.7 1.2 1.6v3.8h2.3z"/></svg></a>
-      <a href="mailto:xliu713@aucklanduni.ac.nz" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap foot">
-    <span>© 2026 Lily · built from scratch with care</span>
-    <span>Auckland, New Zealand</span>
-  </div>
-</footer>
-
-</div>
-<script src="<%- url_for('/js/script.js') %>"></script>
+  <script src="<%- url_for('/js/script.js') %>"></script>
 </body>
 </html>
