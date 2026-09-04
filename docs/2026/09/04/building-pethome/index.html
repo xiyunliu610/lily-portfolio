@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How firsthand pet-care experience became a practical platform for bookings, payments and daily care.">
+  <meta name="author" content="Lily Liu">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta property="og:title" content="Building PetHome: From an Idea to a Full-Stack Project — Lily Liu">
+  <meta property="og:description" content="How firsthand pet-care experience became a practical platform for bookings, payments and daily care.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://xiyunliu610.github.io/lily-portfolio/2026/09/04/building-pethome/">
+  <title>Building PetHome: From an Idea to a Full-Stack Project — Lily Liu</title>
+  <link rel="canonical" href="https://xiyunliu610.github.io/lily-portfolio/2026/09/04/building-pethome/">
+  <link rel="stylesheet" href="/lily-portfolio/css/style.css">
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page-shell">
+    <nav class="site-nav" id="nav" aria-label="Primary navigation">
+  <div class="wrap nav-inner">
+    <a class="logo" href="/lily-portfolio/#top" aria-label="Lily Liu, home">Lily<span>.</span></a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="/lily-portfolio/#work">Work</a>
+      <a href="/lily-portfolio/#experience">Experience</a>
+      <a href="/lily-portfolio/#about">About</a>
+      <a class="active" aria-current="page" href="/lily-portfolio/blog/">Blog</a>
+      <a class="button button-small" href="/lily-portfolio/#contact">Let’s talk</a>
+    </div>
+
+    <button class="nav-toggle" id="navBtn" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+
+    <main id="main" class="article-page">
+      <article>
+        <header class="article-header wrap">
+          <a class="back-link reveal" href="/lily-portfolio/blog/"><span aria-hidden="true">←</span> All articles</a>
+          <div class="article-heading">
+            <div class="article-heading-copy reveal">
+              <div class="post-meta article-meta">
+                <span>Project Journal</span>
+                <time datetime="2026-09-04">4 Sep 2026</time>
+                <span>5 min read</span>
+              </div>
+              <h1>Building PetHome: From an Idea to a Full-Stack Project</h1>
+              <p class="article-deck">How firsthand pet-care experience became a practical platform for bookings, payments and daily care.</p>
+            </div>
+            <div class="article-marker reveal" aria-hidden="true">
+              <span>Project note</span>
+              <strong>01</strong>
+            </div>
+          </div>
+        </header>
+
+
+          <div class="article-gallery wrap reveal" aria-label="PetHome mobile application screens">
+
+              <figure class="article-shot article-shot-1">
+                <img src="/lily-portfolio/images/pethome/home-full-screen.jpg" alt="PetHome mobile app home screen" loading="eager">
+              </figure>
+
+              <figure class="article-shot article-shot-2">
+                <img src="/lily-portfolio/images/pethome/booking-full-screen.jpg" alt="PetHome mobile app booking screen" loading="lazy">
+              </figure>
+
+
+              <div class="gallery-note" aria-hidden="true">
+                <span>React Native</span><span>NestJS</span><span>PostgreSQL</span>
+              </div>
+
+          </div>
+
+
+        <div class="article-layout wrap">
+          <aside class="article-aside reveal" aria-label="Article details">
+            <p class="section-number">Built with</p>
+            <div class="article-tech">
+
+                <span>React Native</span>
+
+                <span>NestJS</span>
+
+                <span>PostgreSQL</span>
+
+                <span>Prisma</span>
+
+                <span>Stripe</span>
+
+            </div>
+
+              <a href="https://github.com/xiyunliu610/yt-paws-platform" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+
+          </aside>
+
+          <div class="article-body reveal">
+            <h2 id="01-Introduction"><a href="#01-Introduction" class="headerlink" title="01 &#x2F; Introduction"></a>01 &#x2F; Introduction</h2><p>Pet boarding services are becoming increasingly popular, but many existing platforms charge high commission fees. They are also mainly designed for bookings between individual pet owners and carers, rather than for people who run their own pet boarding businesses.</p>
+<p>This gave me the idea of building <strong>PetHome</strong> — a platform that can be used by both individual pet carers and commercial boarding providers. The goal is to make it easier to manage bookings, pet information, payments and daily care records in one place.</p>
+<h2 id="02-What-I-Worked-On"><a href="#02-What-I-Worked-On" class="headerlink" title="02 &#x2F; What I Worked On"></a>02 &#x2F; What I Worked On</h2><p>I have completed the first stage of the project, which focuses on the main booking process.</p>
+<p>Users can create profiles for their pets and record important details, such as feeding instructions, health information and care requirements. They can then select a service, submit a booking request and make a payment.</p>
+<p>For service providers, the system makes it easier to view upcoming bookings, check each pet’s information and manage booking statuses. I also worked on connecting the frontend, backend and database so that booking, pet and payment information can be stored and updated correctly.</p>
+<p>The project uses React Native for the user interface, NestJS for the backend, PostgreSQL and Prisma for data management, and Stripe for online payments.</p>
+<h2 id="03-Challenges"><a href="#03-Challenges" class="headerlink" title="03 &#x2F; Challenges"></a>03 &#x2F; Challenges</h2><p>One challenge was designing the platform for both individual carers and commercial boarding businesses. Their needs are similar, but a business may manage more pets, customers and bookings at the same time. I therefore needed to think carefully about the database structure and how the platform could support different types of users.</p>
+<p>Another challenge was managing the full booking and payment process. A booking can move through several stages, such as pending, confirmed, paid, completed or cancelled. The booking status and payment status need to remain consistent, especially when a payment fails or a user tries to pay more than once.</p>
+<p>Connecting the frontend, backend and database was also more complicated than working only on the user interface. When something went wrong, I had to check each part of the system to find where the problem started. This helped me develop a better understanding of how a full-stack application works as a whole.</p>
+<h2 id="04-What-I-Learned"><a href="#04-What-I-Learned" class="headerlink" title="04 &#x2F; What I Learned"></a>04 &#x2F; What I Learned</h2><p>Through this project, I learned how important it is to design the data structure before building individual features. Pets, owners, service providers, bookings and payments are closely connected, so a change in one area can affect several other parts of the application.</p>
+<p>I also gained more practical experience in backend development. I learned how to create APIs, validate user input, manage database records and connect payment results with booking information.</p>
+<p>Most importantly, I learned that building a useful product starts with understanding a real problem. Because I have experience providing pet boarding services, I could design the platform around situations that carers and pet owners actually face.</p>
+<h2 id="05-What’s-Next"><a href="#05-What’s-Next" class="headerlink" title="05 &#x2F; What’s Next"></a>05 &#x2F; What’s Next</h2><p>The next feature I plan to develop is an AI-assisted daily report.</p>
+<p>Pet carers will be able to record information about a pet’s meals, activities, behaviour and general condition. The system will then use these notes to create a clear daily summary for the pet owner.</p>
+<p>I also plan to continue improving booking management, notifications and the overall experience for both pet owners and service providers.</p>
+
+          </div>
+        </div>
+
+        <footer class="article-footer wrap reveal">
+          <p>Thanks for reading.</p>
+          <h2>I’m still building PetHome — and learning with every release.</h2>
+          <a class="button" href="/lily-portfolio/blog/">Back to all articles <span aria-hidden="true">→</span></a>
+        </footer>
+      </article>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© 2026 Lily Liu</span>
+        <span>Designed &amp; built in Auckland</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/lily-portfolio/js/script.js"></script>
+</body>
+</html>
