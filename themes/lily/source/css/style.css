@@ -500,6 +500,15 @@ a {
   transform: rotate(7deg);
 }
 
+.phone-three {
+  top: 14px;
+  left: 50%;
+  width: 36%;
+  z-index: 0;
+  opacity: 0.9;
+  transform: translateX(-50%) rotate(-2deg);
+}
+
 .phone-label {
   display: block;
   margin-bottom: 12px;
