@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || 'en-NZ' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= page.description || 'Notes on full-stack development, practical products and what I learn while building them.' %>">
+  <meta name="author" content="<%= config.author %>">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta property="og:title" content="Blog — Lily Liu">
+  <meta property="og:description" content="<%= page.description || 'Notes on full-stack development, practical products and what I learn while building them.' %>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="<%- full_url_for(page.path) %>">
+  <title>Blog — Lily Liu</title>
+  <link rel="canonical" href="<%- full_url_for(page.path) %>">
+  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page-shell">
+    <%- partial('_partial/nav') %>
+
+    <main id="main" class="blog-page">
+      <header class="blog-hero wrap">
+        <p class="eyebrow reveal">&gt;_ notes from the build</p>
+        <div class="blog-hero-grid">
+          <h1 class="reveal">Ideas, lessons and <em>work in progress.</em></h1>
+          <p class="reveal">A collection of practical notes about the products I’m building, the problems behind them and what I learn along the way.</p>
+        </div>
+      </header>
+
+      <section class="blog-index wrap" aria-labelledby="articles-title">
+        <div class="blog-index-heading reveal">
+          <p class="section-number">Latest writing</p>
+          <h2 id="articles-title">From the notebook</h2>
+        </div>
+
+        <div class="post-list">
+          <% site.posts.sort('date', -1).toArray().forEach(function(post, index) { %>
+            <% const category = post.categories && post.categories.length ? post.categories.first().name : 'Notes'; %>
+            <article class="post-card reveal">
+              <a class="post-card-link" href="<%- url_for(post.path) %>" aria-label="Read <%= post.title %>">
+                <div class="post-card-number" aria-hidden="true"><%= String(index + 1).padStart(2, '0') %></div>
+                <div class="post-card-copy">
+                  <div class="post-meta">
+                    <span><%= category %></span>
+                    <time datetime="<%= date(post.date, 'YYYY-MM-DD') %>"><%= date(post.date, 'D MMM YYYY') %></time>
+                    <% if (post.reading_time) { %><span><%= post.reading_time %></span><% } %>
+                  </div>
+                  <h3><%= post.title %></h3>
+                  <p><%= post.description || post.excerpt %></p>
+                  <span class="post-card-action">Read article <span aria-hidden="true">→</span></span>
+                </div>
+              </a>
+            </article>
+          <% }); %>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© 2026 Lily Liu</span>
+        <span>Designed &amp; built in Auckland</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="<%- url_for('/js/script.js') %>"></script>
+</body>
+</html>

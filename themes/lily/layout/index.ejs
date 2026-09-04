@@ -20,22 +20,7 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="page-shell">
-    <nav class="site-nav" id="nav" aria-label="Primary navigation">
-      <div class="wrap nav-inner">
-        <a class="logo" href="#top" aria-label="Lily Liu, home">Lily<span>.</span></a>
-
-        <div class="nav-links" id="navLinks">
-          <a href="#work">Work</a>
-          <a href="#experience">Experience</a>
-          <a href="#about">About</a>
-          <a class="button button-small" href="#contact">Let’s talk</a>
-        </div>
-
-        <button class="nav-toggle" id="navBtn" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </nav>
+    <%- partial('_partial/nav') %>
 
     <main id="main">
       <header class="hero wrap" id="top">
@@ -93,14 +78,11 @@
         <div class="project-list">
           <article class="project project-pethome reveal">
             <div class="project-visual" aria-hidden="true">
-              <div class="phone-shot phone-three">
-                <img src="<%- url_for('/images/pethome/booking.jpg') %>" alt="" loading="lazy">
-              </div>
               <div class="phone-shot phone-one">
-                <img src="<%- url_for('/images/pethome/home.jpg') %>" alt="" loading="lazy">
+                <img src="<%- url_for('/images/pethome/booking-full-screen.jpg') %>" alt="" loading="lazy">
               </div>
               <div class="phone-shot phone-two">
-                <img src="<%- url_for('/images/pethome/services.jpg') %>" alt="" loading="lazy">
+                <img src="<%- url_for('/images/pethome/home-full-screen.jpg') %>" alt="" loading="lazy">
               </div>
               <span class="project-index">01</span>
             </div>

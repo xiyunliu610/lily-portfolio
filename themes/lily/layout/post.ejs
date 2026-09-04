@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || 'en-NZ' %>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="<%= page.description %>">
+  <meta name="author" content="<%= config.author %>">
+  <meta name="theme-color" content="#f4f1e8">
+  <meta property="og:title" content="<%= page.title %> — Lily Liu">
+  <meta property="og:description" content="<%= page.description %>">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="<%- full_url_for(page.path) %>">
+  <title><%= page.title %> — Lily Liu</title>
+  <link rel="canonical" href="<%- full_url_for(page.path) %>">
+  <link rel="stylesheet" href="<%- url_for('/css/style.css') %>">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="page-shell">
+    <%- partial('_partial/nav') %>
+
+    <main id="main" class="article-page">
+      <article>
+        <header class="article-header wrap">
+          <a class="back-link reveal" href="<%- url_for('/blog/') %>"><span aria-hidden="true">←</span> All articles</a>
+          <div class="article-heading">
+            <div class="article-heading-copy reveal">
+              <div class="post-meta article-meta">
+                <% if (page.categories && page.categories.length) { %><span><%= page.categories.first().name %></span><% } %>
+                <time datetime="<%= date(page.date, 'YYYY-MM-DD') %>"><%= date(page.date, 'D MMM YYYY') %></time>
+                <% if (page.reading_time) { %><span><%= page.reading_time %></span><% } %>
+              </div>
+              <h1><%= page.title %></h1>
+              <p class="article-deck"><%= page.description %></p>
+            </div>
+            <div class="article-marker reveal" aria-hidden="true">
+              <span><%= page.article_type || 'Project note' %></span>
+              <strong><%= page.post_number || '01' %></strong>
+            </div>
+          </div>
+        </header>
+
+        <% if (page.gallery && page.gallery.length) { %>
+          <div class="article-gallery<% if (page.gallery_theme) { %> article-gallery-<%= page.gallery_theme %><% } %> wrap reveal" aria-label="<%= page.gallery_label || page.title + ' application screens' %>">
+            <% page.gallery.forEach(function(image, index) { %>
+              <figure class="article-shot article-shot-<%= index + 1 %>">
+                <img src="<%- url_for(image.src) %>" alt="<%= image.alt %>" loading="<%= index === 0 ? 'eager' : 'lazy' %>">
+              </figure>
+            <% }); %>
+            <% if (page.gallery_tech && page.gallery_tech.length) { %>
+              <div class="gallery-note" aria-hidden="true">
+                <% page.gallery_tech.forEach(function(tech) { %><span><%= tech %></span><% }); %>
+              </div>
+            <% } %>
+          </div>
+        <% } %>
+
+        <div class="article-layout<% if (!page.gallery || !page.gallery.length) { %> article-layout-without-gallery<% } %> wrap">
+          <aside class="article-aside reveal" aria-label="Article details">
+            <p class="section-number"><%= page.aside_label || 'Built with' %></p>
+            <div class="article-tech">
+              <% if (page.tags && page.tags.length) { page.tags.toArray().forEach(function(tag) { %>
+                <span><%= tag.name %></span>
+              <% }); } %>
+            </div>
+            <% if (page.repository) { %>
+              <a href="<%= page.repository %>" target="_blank" rel="noopener noreferrer">View repository <span aria-hidden="true">↗</span></a>
+            <% } %>
+          </aside>
+
+          <div class="article-body reveal">
+            <%- page.content %>
+          </div>
+        </div>
+
+        <footer class="article-footer wrap reveal">
+          <p><%= page.footer_kicker || 'Thanks for reading.' %></p>
+          <h2><%= page.footer_title || 'More notes from the build are coming soon.' %></h2>
+          <a class="button" href="<%- url_for('/blog/') %>">Back to all articles <span aria-hidden="true">→</span></a>
+        </footer>
+      </article>
+    </main>
+
+    <footer>
+      <div class="wrap footer-inner">
+        <span>© 2026 Lily Liu</span>
+        <span>Designed &amp; built in Auckland</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="<%- url_for('/js/script.js') %>"></script>
+</body>
+</html>
