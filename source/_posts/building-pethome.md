@@ -3,7 +3,7 @@ title: "Building PetHome: From an Idea to a Full-Stack Project"
 date: 2026-09-04 12:00:00
 description: How firsthand pet-care experience became a practical platform for bookings, payments and daily care.
 reading_time: 5 min read
-post_number: "01"
+post_number: "02"
 article_type: Project note
 repository: https://github.com/xiyunliu610/yt-paws-platform
 gallery_label: PetHome mobile application screens

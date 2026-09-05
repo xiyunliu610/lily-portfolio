@@ -3,7 +3,7 @@ title: What Animal Rescue Taught Me About Building Products
 date: 2026-08-15 12:00:00
 description: How nearly ten years in animal rescue shaped the way I think about real problems, simple systems, unexpected situations and user trust.
 reading_time: 5 min read
-post_number: "02"
+post_number: "03"
 article_type: Personal essay
 aside_label: Themes
 footer_kicker: Lessons that stay with me.
