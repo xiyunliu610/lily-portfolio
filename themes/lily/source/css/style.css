@@ -453,6 +453,7 @@ a {
 .project {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
+  min-height: 720px;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -1477,6 +1478,7 @@ footer {
 
   .project {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .project-visual,
