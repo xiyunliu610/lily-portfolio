@@ -564,16 +564,16 @@ a {
     linear-gradient(145deg, #d7ffb8, #bfe9d6 48%, #9cd9f4);
 }
 
-.tenme-lessons-shot {
+.tenme-login-shot {
   top: 42px;
   left: 11%;
-  aspect-ratio: 960 / 1744;
+  aspect-ratio: 652 / 1416;
 }
 
 .tenme-buddies-shot {
   right: 11%;
   bottom: 38px;
-  aspect-ratio: 894 / 1700;
+  aspect-ratio: 662 / 1428;
 }
 
 .phone b {
@@ -1510,6 +1510,10 @@ footer {
     order: 0;
   }
 
+  .project-tenme .project-visual {
+    min-height: 550px;
+  }
+
   .timeline,
   .about-grid {
     margin-left: 0;
@@ -1713,6 +1717,10 @@ footer {
   .project-tenme .project-visual,
   .project-chroma .project-visual {
     min-height: 345px;
+  }
+
+  .project-tenme .project-visual {
+    min-height: 480px;
   }
 
   .phone {
